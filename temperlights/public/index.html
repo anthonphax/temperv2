@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotes | TemperLights</title>
+    <link rel="stylesheet" href="styles.css"> <!-- SASS compilado -->
+
+    <script>
+      function addTag() {
+        const searchString = document.getElementById("searchInput").value;
+        console.log("Searching for:", searchString);
+        // Coloque aqui qualquer ação que deseja realizar com o valor de `searchString`
+      }
+
+    
+      // dados do backend
+      const pedidoId = 394;
+      const cliente = "Prefeitura Apucarana";
+
+      // Popula o texto no elemento HTML
+      document.getElementById("pedido-header").textContent = `Lotes do Pedido #${pedidoId} - ${cliente}`;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img class="logo" src="logo.png" alt="Logotipo">
+
+            <div class="item">
+              <div class="fluid action input">
+                <input type="text" placeholder="ID de Peça" id="searchInput">
+                <button class="icon button" onclick="addTag()">
+                  🔍
+                </button>
+              </div>        
+            </div>
+
+            <ul>
+                <li><a href="#pedidos">Pedidos</a></li>
+                <li><a href="#config">Configurações</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <header class="header">
+              <h2 id="pedido-header">Lote 123 - Pedido 394 - Prefeitura Apucarana</h2>
+              <div class="admin-info">
+                <img src="session_user.jpeg" alt="Foto da Administradora"> 
+                <div>
+                  <h3>Ana Ribeiro</h3>
+                  <p>Gerente de Produção</p>
+                </div>
+              </div>
+            </header>
+            <div class="controls">
+                <p>Filtrar:</p>
+                <button>Essa Semana</button>
+                <button>Em Andamento</button>
+                <button>Alerta</button>
+                <button>Finalizado</button>
+                <button>Excluídos</button>
+
+                <input type="search" placeholder="Pesquisar Peça por ID">
+            </div>
+
+
+            <h2>
+              Peças
+            </h2>
+
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Tipo</th>
+                            <th>Máquina</th>
+                            <th>Dimensões (cm)</th>
+                            <th>Tempo ocioso</th>
+                            <th>Data de Começo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Temperado</td>
+                            <td>Jateadora</td>
+                            <td>200x200</td>
+                            <td class="time_alert">12:03:15</td>
+                            <td>24.05.2024 11:16 AM</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Laminado</td>
+                            <td>Lapidadora</td>
+                            <td>250x400</td>
+                            <td>00:00:00</td>
+                            <td>24.05.2024 07:16 AM</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Temperado</td>
+                            <td>Lapidadora</td>
+                            <td>200x200</td>
+                            <td>00:03:01</td>
+                            <td>24.05.2024 11:03 AM</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Temperado</td>
+                            <td>Jateadora</td>
+                            <td>200x200</td>
+                            <td>00:03:15</td>
+                            <td>24.05.2024 11:16 AM</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Laminado</td>
+                            <td>Lapidadora</td>
+                            <td>250x400</td>
+                            <td>00:00:00</td>
+                            <td>24.05.2024 07:16 AM</td>
+                        </tr>
+                                                <tr>
+                            <td>6</td>
+                            <td>Temperado</td>
+                            <td>Lapidadora</td>
+                            <td>200x200</td>
+                            <td>00:03:01</td>
+                            <td>24.05.2024 11:03 AM</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Temperado</td>
+                            <td>Jateadora</td>
+                            <td>200x200</td>
+                            <td>00:03:15</td>
+                            <td>24.05.2024 11:16 AM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Seções de Contadores -->
+            <section class="counters">
+                <div class="counter-box in-progress">
+                    <h3>Em Andamento</h3>
+                    <p>3</p>
+                </div>
+                <div class="counter-box alert">
+                    <h3>Alerta</h3>
+                    <p>1</p>
+                </div>
+                <div class="counter-box finished">
+                    <h3>Finalizado</h3>
+                    <p>5</p>
+                </div>
+                <div class="counter-box losses">
+                    <h3>Perdas</h3>
+                    <p>2</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
