@@ -45,7 +45,7 @@ const Header = () => {
       <div className="admin-info">
         <img src="session_user.jpeg" alt="Foto da Administradora" />
         <div>
-          <h3>Ana Ribeiro</h3>
+          <h3>PEDRÃO</h3>
           <p>Gerente de Produção</p>
         </div>
       </div>
